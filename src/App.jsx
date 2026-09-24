@@ -4,7 +4,7 @@ import Coleccion from './components/coleccion'
 import Favoritos from './components/favoritos'
 import Info from './components/info'
 import Usuario from './components/usuario'
-import Fakeapi from './components/fakeapi'
+import Starwars from './components/starwars'
 import './App.css'
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
     <Favoritos/>
     <Info/>
     <Usuario/>
-    <Fakeapi/>
+    <Starwars/>
     </>
   )
 }
