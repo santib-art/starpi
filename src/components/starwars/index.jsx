@@ -1,10 +1,9 @@
 import { useParams } from "react-router-dom"; 
 import { useState, useEffect } from 'react'
+import './style.css'
 
-import "./style.css"
-
-function Starwars() {
-    const { name } = useParams();
+function Pokemon() {
+    const { name } = useParams(); 
     const [datapoke, setDatapoke] = useState([]);
 
     useEffect(() => {
@@ -14,15 +13,10 @@ function Starwars() {
       .catch(error => console.error("Error:", error));
     }, [name]); 
     console.log(datapoke)
-
-     if (!datapoke || !datapoke.id) return <p>Cargando...</p>;
+    
+    if (!datapoke || !datapoke.id) return <p>Cargando...</p>;
     return (
-        <>
-           {datapoke.id}
-           {datapoke.name}
-           {datapoke.data_experience}
-           {datapoke.abilities[0].ability.name}
-           <div>
+        <div>
         <p>{datapoke.id}</p>
         <h1>{datapoke.name}</h1>
         <img 
@@ -43,8 +37,7 @@ function Starwars() {
         <p>Ataque Especial: {datapoke.stats[3].base_stat} Defensa Especial: {datapoke.stats[4].base_stat}</p>
 
         </div>
-        </>
     )
 }
 
-export default Starwars
+export default Pokemon
