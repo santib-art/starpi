@@ -28,7 +28,7 @@ function App() {
         <Route path='/Favoritos' element={<Favoritos />} />
         <Route path='/Info' element={<Info />} />
         <Route path='/Usuario' element={<Usuario />} />
-        <Route path='/Starwars/:name' element={<Starwars />} />
+        <Route path='/Pokemon/:name' element={<Starwars />} />
       </Routes>
     </Router>
  
